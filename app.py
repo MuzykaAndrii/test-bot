@@ -29,7 +29,7 @@ def getMessage():
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url=WEBHOOK)
+    bot.set_webhook(url='{}/{}'.format(WEBHOOK,TOKEN))
     return "!", 200
 
 
